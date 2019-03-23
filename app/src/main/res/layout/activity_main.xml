@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    android:layout_margin="10dp">
 
     <LinearLayout
         android:id="@+id/linearniPrikaz"
@@ -111,15 +113,40 @@
         android:id="@+id/editujMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="192dp"
+
+        android:background="@drawable/okvir_za_text_view"
+
+        android:minWidth="100dp"
+        android:minHeight="20dp"
+        android:maxWidth="120dp"
+        android:maxHeight="30dp"
+        android:maxLines="1"
+
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+
+        android:shadowColor="@color/lightBlue"
         android:text="@string/pisi"
-        app:layout_constraintLeft_toRightOf="@+id/dugmeVan"
+        android:textColor="@color/crvena"
+        android:textColorHighlight="@color/element_linije"
+
         app:layout_constraintBottom_toTopOf="@+id/noviLejaut"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/lightBlue"
-        />
+        app:layout_constraintLeft_toRightOf="@+id/dugmeVan"
+        app:layout_constraintStart_toEndOf="@+id/TVVan"
+        app:layout_constraintEnd_toEndOf="parent"/>
+        <!--"wrap_content" siri i smanjuje neki view (textView, EditText..)
+        u zavisnoti od toga koliko je tacno prostora potrebano da nesto stane u njnega, ali
+        bez atributa "minHeight" i "minWidth" on moze uciniti da se neki iz pomenutog spiska
+        view-ova ne vidi ako se sizbrise sav sadrzaj koji je po defaultu tu-->
+
+
+        <!--"maxLines" atribut zapravo daje do znanja koliko linija moze biti vidljivo
+        korisniku od svih koje je unio u EditText,dok atribut "singleLine" psotavljanjem
+        na "true" ne radimo isto kao i da smo stavili maxLines="1", vec cinimo da se sav
+        tekst upisan nalazi u jenodj liniji iako on mozda niej vidlj, ali se ne radi
+        automatski prelaz u drugi red ako tekst ne moze stati u jednu liniju-->
 
     <FrameLayout
         android:id="@+id/noviLejaut"
