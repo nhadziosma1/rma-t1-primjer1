@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearniPrikaz"
+        android:layout_width="0dp"
+        android:layout_height="229dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noviLejaut" >
+
+        <!--"parent" predstvlja roditeljsku klasu koja je sam prozor-->
+
+        <TextView
+            android:id="@+id/prviTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dunge" />
+
+        <TextView
+            android:id="@+id/treciTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.421" />
+
+        <TextView
+            android:id="@+id/drugiTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/crvena"
+            android:text="@string/dunge" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="@string/edText" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Button" />
+
+    </LinearLayout>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barijera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="linearniPrikaz"
+        app:layout_constraintTop_toBottomOf="@id/linearniPrikaz" />
+
+    <TextView
+        android:id="@+id/pokusajIspodBarijere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cundraj"
+        app:layout_constraintTop_toBottomOf="@id/barijera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/noviLejaut"/>
+
+    <Button
+        android:id="@+id/dugmeVan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="177dp"
+        android:text="@string/unosDugme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/noviLejaut"
+        app:layout_constraintRight_toLeftOf="@id/TVVan"/>
+
+    <TextView
+        android:id="@+id/TVVan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="192dp"
+        android:text="@string/spoji"
+        app:layout_constraintLeft_toRightOf="@+id/dugmeVan"
+        app:layout_constraintBottom_toTopOf="@+id/noviLejaut"
+        android:background="@color/lightBlue"
+        />
+
+    <EditText
+        android:id="@+id/editujMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="192dp"
+        android:text="@string/pisi"
+        app:layout_constraintLeft_toRightOf="@+id/dugmeVan"
+        app:layout_constraintBottom_toTopOf="@+id/noviLejaut"
+        android:background="@color/lightBlue"
+        />
+
+    <FrameLayout
+        android:id="@+id/noviLejaut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearniPrikaz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dugmeVan">
+
+        <ListView
+            android:id="@+id/listaPogled"
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            />
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

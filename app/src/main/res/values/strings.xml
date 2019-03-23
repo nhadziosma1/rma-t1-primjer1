@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">VJ-18033</string>
+
+    <string name="dunge">dunge</string>
+    <string name="edText">edit text</string>
+    <string name="Button">BUTTON</string>
+    <string name="cundraj"> govno</string>
+    <string name="unos">upisi neki tekst</string>
+    <string name="unosDugme">UNESI</string>
+    <string name="spoji">spoji me</string>
+    <string name="pisi">pisi u mene</string>
+
+</resources>
