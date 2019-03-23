@@ -36,8 +36,13 @@ public class MainActivity extends AppCompatActivity
         listViewVan = (ListView) findViewById(R.id.listaPogled);
         editujMe = (EditText) findViewById(R.id.editujMe);
 
+        //Kada se u konstuktoru zeli koristiti neki od vec integrisanih layouta kao sto je "simple_list_item_1", mora se ispred "R", koji predtsvlja
+        // oznaku za resource, stajati i "android"
+        //ulancaniAdapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1, unosiKorisnika);
 
-        ulancaniAdapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1, unosiKorisnika);
+        //treci parametar konstruktora: The id of the TextView within the layout resource to be populated
+        ulancaniAdapter = new ArrayAdapter(getBaseContext(), R.layout.element_liste, R.id.Itemname, unosiKorisnika);
+
         listViewVan.setAdapter(ulancaniAdapter);
 
         dugmeVan.setOnClickListener(new View.OnClickListener() {
